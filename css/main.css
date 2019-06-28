@@ -285,7 +285,6 @@ nav.navbar .navbar-brand img {
 }
 .process .carousel-procces .carousel-item .carousel-caption h5 {
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .process .carousel-procces .carousel-item .carousel-caption.progress-height {
