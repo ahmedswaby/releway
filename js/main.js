@@ -3,7 +3,7 @@
 $(document).ready(function () {
     // make navbar have color when you scroll 
     $(window).scroll(function () {
-    
+
         if ($(window).scrollTop() <= 100) {
             $('nav.navbar').css({
                 'background-color': 'transparent',
@@ -16,7 +16,7 @@ $(document).ready(function () {
             });
             $('.scroll-up').fadeIn(700)
         }
-        
+
         // count up in projects section
         if ($(window).scrollTop() >= 600) {
 
@@ -103,6 +103,42 @@ $(document).ready(function () {
             })
         }
     })
+    // latest work section
+    $('.grid').isotope({
+
+        itemSelector: '.col-lg-4',
+        layoutMode: 'fitRows'
+    });
+    $('.filter ul li').click(function () {
+
+        $('.filter ul li').removeClass('active');
+        $(this).addClass('active');
+
+        var selector = $(this).attr('data-filter');
+        $('.grid').isotope({
+            filter: selector
+        });
+        return false;
+
+    });
+
+    // magnific Popup
+    $('.gallery-item').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true, // set to true to enable gallery
+
+            preload: [1, 1], // read about this option in next Lazy-loading section
+
+
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+            tPrev: 'Previous (Left arrow key)', // title for left button
+            tNext: 'Next (Right arrow key)', // title for right button
+            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+        }
+    });
+
     // owl carousel for team slider
     $('.our-team .owl-carousel').owlCarousel({
         loop: false,
@@ -179,41 +215,6 @@ $(document).ready(function () {
     //         'right': '-400px'
     //     })
     // })
-    // latest work section
-    $('.grid').isotope({
-
-        itemSelector: '.col-lg-4',
-        layoutMode: 'fitRows'
-    });
-    $('.filter ul li').click(function () {
-
-        $('.filter ul li').removeClass('active');
-        $(this).addClass('active');
-
-        var selector = $(this).attr('data-filter');
-        $('.grid').isotope({
-            filter: selector
-        });
-        return false;
-
-    });
-
-    // magnific Popup
-    $('.gallery-item').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true, // set to true to enable gallery
-
-            preload: [1, 1], // read about this option in next Lazy-loading section
-
-
-            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
-
-            tPrev: 'Previous (Left arrow key)', // title for left button
-            tNext: 'Next (Right arrow key)', // title for right button
-            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
-        }
-    });
 
 
     /* going to specific place by scrolling */
