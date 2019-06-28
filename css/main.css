@@ -270,6 +270,11 @@ nav.navbar .navbar-brand img {
 .process .carousel-procces .carousel-item {
   height: 250px;
 }
+@media (max-width: 540px) {
+  .process .carousel-procces .carousel-item {
+    height: 400px;
+  }
+}
 @media (max-width: 991px) {
   .process .carousel-procces .carousel-item {
     height: 300px;
