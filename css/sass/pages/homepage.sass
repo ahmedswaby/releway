@@ -113,14 +113,22 @@
             width: 50px
             height: 50px
             background-color: $whiteColor
-
-
             margin: auto
             @include transition(all 0.4s ease-in-out)
         a.carousel-control-prev
             left: -400px
+            @media ($maxSmall)
+                left: 0
         a.carousel-control-next
-            right: -400px         
+            right: -400px
+            @media ($maxSmall)
+                right: 0
+    &:hover
+        a.carousel-control-prev
+            left: 0
+        a.carousel-control-next
+            right: 0
+        
 // End process section
 // start work section
 .work
