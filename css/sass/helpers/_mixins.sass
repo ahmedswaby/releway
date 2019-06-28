@@ -1,0 +1,113 @@
+
+// mixin to add overlay
+@mixin overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+
+@mixin scale
+  transform: scale(1.1)
+  @include prefixer(tranform, scale(1.1), moz webkit o)
+// mixin to add prefix
+
+@mixin prefixer ($prop, $value, $prefixes: ())
+  @each $prefix in $prefixes
+    #{'-' + $prefix + '-' + $prop}: $value
+
+  #{$prop}: $value
+
+
+// mixin to make animation prefixes
+
+@mixin keyF($animationNM)
+
+  @keyframes #{$animationNM}
+
+    @content
+
+  @-webkit-keyframes #{$animationNM}
+
+    @content
+
+  @-moz-keyframes #{$animationNM}
+
+    @content
+
+
+
+// mixin to make add opacity
+
+@function safaRgba($color, $alpha: 1.0)
+    @return unquote("rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})")
+
+
+// mixin to add opacity for IE
+/*
+// @mixin opacity($value)
+//   zoom: 1
+//   $opacity-ie: $value * 100
+//   filter: alpha(opacity = $opacity-ie)
+//   opacity: $value
+
+
+
+
+@mixin transition($transition...)
+  -moz-transition: $transition
+  -webkit-transition: $transition
+  -o-transition: $transition
+  transition: $transition
+
+//@mixin paddo($topPadding: 10px, $rightPadding: 20px, $bottomPadding: 10px, $leftPadding: 20px, $evenMorePadding: 10px)
+
+
+
+
+// mixin for border (i think)
+@mixin foobar($a, $b, $c)
+    // receives args $a = 5px, $b = red, and so on
+
+$myArgs: 5px red "bla bla"
+// at this point, you could also programmatically add/remove arguments
+
+//@include foobar($myArgs...)
+
+
+
+// mixin for mobile
+
+@mixin only-for-mobile
+    @media (max-width: 768px)
+        @content
+
+@mixin not-last-child($selector)
+  & #{$selector}:not(:last-child)
+    @content
+
+      
+//@include only-for-mobile()
+  /* note: @content begins here */
+    p
+        font-size: 150%
+
+    // @content ends
+
+
+
+
+//@include message("actionable")
+    button
+      actionable messages may contain buttons for taking action!
+      float: right
+
+      compiled CSS
+/*.message-actionable
+  border: 1px dotted yellow
+  color: yellow
+  margin: 20px
+  padding: 10px
+  .message-actionable button
+  float: right*/

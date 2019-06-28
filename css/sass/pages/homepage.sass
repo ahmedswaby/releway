@@ -1,0 +1,357 @@
+// start about us section
+.about-us
+    padding: 60px 0 30px 0
+    .info
+        width: 70%
+        margin: auto
+    .boxes
+        padding-top: 30px
+        .box
+            border: 1px solid rgba(225, 225, 225, 0.4)
+            margin-top: 30px
+            padding: 0 10px 10px
+            i
+                background-color: $mainColor
+                width: 53px
+                height: 40px
+                line-height: 40px
+                color: $whiteColor
+                margin-bottom: 10px
+            p
+                color: $whiteGray
+// End about us section
+// start our projects 
+.our-projects
+    padding: $mainSpace 0
+    background-color: #f7f7f7
+    .our-numbers
+        @include not-last-child('div')
+            border-right: 1px solid rgba(225, 225, 2250)
+        .number
+            p
+                text-transform: uppercase
+
+// End our projects 
+// start our team
+.our-team
+    padding: $mainSpace 0
+    .head-info
+        padding-bottom: $smallSpace
+        h2
+            font-weight: normal
+            text-transform: capitalize
+        p
+            width: 70%
+            margin: 20px auto 10px
+            color: $whiteGray
+    .slide
+        figure
+            img
+                transform: scale(1.1)
+                @include prefixer(tranform, scale(1.1), moz webkit o)
+                &:hover
+                    transform: scale(1)
+                    @include prefixer(tranform, scale(1), moz webkit o)
+        &:hover
+            img
+                transform: scale(1)
+                @include prefixer(tranform, scale(1), moz webkit o)
+    figcaption
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+    .social
+        margin-top: $smallSpace
+        @include not-last-child('i')
+            margin-right: 10px
+
+        
+// End our Team 
+// start process section
+.process
+    padding: $mainSpace 0
+    position: relative
+    background-image: url('../img/process-bg.jpg')
+    height: auto
+    background-position: center
+    background-repeat: no-repeat
+    background-attachment: fixed
+    .overlay
+        @include overlay
+        background-color: rgba(225, 225, 225, 0.7)
+    .carousel-procces
+        .carousel-item
+            height: 250px
+            @media ($maxSmall)
+                height: 300px
+            @media ($maxMobile)
+                height: 350px
+            .carousel-caption
+                color: #000
+                h5
+                    text-transform: uppercase
+                    margin-bottom: $smallSpace
+            .carousel-caption.progress-height
+                @media ($maxMobile)
+                    height: 300px
+                p
+                    color: $whiteGray
+                .progress-section
+                    .progress
+                        margin-bottom: $smallSpace
+                        .progress-bar
+                            text-align: left
+                            padding-left: 10px
+                            text-transform: uppercase
+                            background-color: $mainColor
+                            font-style: italic
+        a.carousel-control-prev,
+        a.carousel-control-next
+            color: $whiteGray
+            width: 50px
+            height: 50px
+            background-color: $whiteColor
+
+
+            margin: auto
+            @include transition(all 0.4s ease-in-out)
+        a.carousel-control-prev
+            left: -400px
+        a.carousel-control-next
+            right: -400px         
+// End process section
+// start work section
+.work
+    padding: $mainSpace 0
+    .info
+        margin-bottom: 30px
+        h2
+            font-weight: normal
+            text-transform: capitalize
+        p
+            width: 70%
+            margin: 10px auto
+    .filter
+        ul
+            display: inline-block
+            margin-bottom: 0
+            list-style: none
+            li
+                float: left
+                cursor: pointer
+                padding-bottom: 15px
+                padding-right: $smallSpace
+                a
+                    color: $whiteGray
+                    text-transform: uppercase
+                    &:hover
+                        color: #000
+            li.active
+                a
+                    color: #000
+    .projects
+        .project-info
+            overflow: hidden
+            position: relative
+            &:hover
+                img
+                    transform: scale(1)
+                    background-size: cover
+                .overlay-image
+                    display: flex
+            img
+                max-width: 100%
+                @include transition(all 0.56s ease-in-out)
+                @include scale
+            .overlay-image
+                background-color: rgba(225, 225, 225, 0.7)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                display: none
+                @include overlay
+                h2
+                    color: $mainColor
+// End work section
+//start testmonial section
+.testimonials
+    padding: $mainSpace 0 
+    background-image: url(../img/parallax-bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-size: cover
+    .owl-carousel.owl-loaded
+        width: 50%
+        padding: 30px 20px
+        margin: 20px 0
+        @media ($maxSmall)
+            width: 100%
+        .owl-stage-outer
+            background-color: rgba(225, 225, 225, 0.7)
+            border-radius: 8px
+            .testmo
+                padding: 30px 20px
+                i
+                    color: $mainColor
+// End tstmonial section
+//start partner section
+.partners
+    background-color: $mainColor
+    padding: $mainSpace 0
+    color: #FFF
+    .item
+        img
+            width: 70%
+// End partner section 
+// start pricess section
+.pricess
+    background-color: #f7f7f7
+    padding: $mainSpace 0
+    .pricing
+        padding-bottom: $mainSpace
+        h2
+            font-weight: normal
+        p
+            width: 70%
+            margin: auto
+    .pricing-box.favourite-one
+        background-color: $mainColor
+        color: $whiteColor
+        li
+            border-bottom: 1px solid #2a2a2a14
+            padding: 10px 0
+        a.btn
+            color: $whiteColor
+            border: 1px solid $whiteColor
+            &:hover
+                background-color: $whiteColor
+                color: $mainColor
+    .pricing-box
+        padding: 35px 0px
+        background-color: $whiteColor
+        @include transition(all .2s ease-in-out)
+        @media ($maxSmall)
+            margin-top: 10px
+        &:hover
+            box-shadow: 0px 50px 50px rgba(0,0,0,0.1)
+            z-index: 100
+            transform: translate(0, -10px)
+        .price
+            box-shadow: 1px 0px 40px -21px
+            margin: $smallSpace
+            padding: 10px 0
+            h5
+                font-weight: normal
+        li
+            border-bottom: 1px solid #f7f7f7
+            padding: 10px 0
+        a.btn
+            border: 1px solid #f7f7f7
+            padding: 13px 24px
+            border-radius: 33px
+            &:hover
+                background-color: $mainColor
+                color: $whiteColor
+                
+
+// End pricess section
+// start contact section 
+.contact
+    padding: $mainSpace 0
+    .contact-info
+        h2
+            font-weight: normal
+        p
+            width: 70%
+            margin: $smallSpace auto
+            color: $whiteGray
+    .form
+        margin-top: $smallSpace
+        .form-control
+            margin-bottom: $smallSpace
+            background-color: #f7f7f7
+            &:focus
+                outline: none
+                box-shadow: none
+                border-color: $mainColor
+        textarea.form-control
+            resize: none
+        .btn
+            padding: 10px 30px
+            border: 1px solid #676767
+            border-radius: 24px
+            &:hover
+                background-color: $mainColor
+                border-color: $mainColor
+                color: $whiteColor
+    .some-info
+        margin-top: $smallSpace
+        margin-left: 30px
+        overflow: hidden
+        .detail
+            margin-bottom: 40px
+            text-align: left
+            i
+                background: $mainColor none repeat scroll 0 0
+                color: #ffffff
+                float: left
+                font-size: 22px
+                height: $mainSpace
+                line-height: $mainSpace
+                margin-right: $smallSpace
+                margin-bottom: 10px
+                text-align: center
+                width: $mainSpace
+                border-radius: 50%
+            h6
+                overflow: hidden
+                font-weight: normal
+                text-transform: uppercase
+
+// End contact section
+//Start map section
+.map
+    .container-fluid
+        padding-right: 0
+        padding-left: 0
+// End map section
+// start newsletter section
+.newsletter
+    padding: $mainSpace 0
+    background-color: $mainColor
+    color: $whiteColor
+    h2
+        font-weight: normal
+    .form
+        .form-control
+            width: 70%
+            margin: 30px auto
+            padding: 30px
+            border-radius: 35px
+        .btn
+
+            color: $whiteColor
+            border: 1px solid $whiteColor
+            padding: 10px 14px
+            border-radius: 25px
+            &:hover
+                background-color: $whiteColor
+                color: $mainColor
+            
+// End newsletter section
+// Start scroll-up section
+.scroll-up
+    position: fixed
+    bottom: 20px
+    right: 20px
+    width: 50px
+    height: 40px
+    background-color: $mainColor
+    text-align: center
+    line-height: 40px
+    border-radius: 9px
+    color: $whiteColor
+    display: none
+// End scroll-up section
