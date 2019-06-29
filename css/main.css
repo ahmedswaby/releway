@@ -87,9 +87,6 @@ nav.navbar .navbar-brand img {
   outline: none;
 }
 
-.carousel.header {
-  height: 100vh !important;
-}
 .carousel.header .carousel-item img {
   width: 100%;
   height: 100vh;
@@ -437,6 +434,10 @@ nav.navbar .navbar-brand img {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .testimonials .owl-carousel.owl-loaded {

@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
     // make navbar have color when you scroll 
+    $('.carousel.header').height($(window).height())
     $(window).scroll(function () {
 
         if ($(window).scrollTop() <= 100) {

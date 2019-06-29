@@ -196,6 +196,7 @@
     background-repeat: no-repeat
     background-attachment: fixed
     background-size: cover
+    @include prefixer (background-size, cover, moz webkit o)
     .owl-carousel.owl-loaded
         width: 50%
         padding: 30px 20px
