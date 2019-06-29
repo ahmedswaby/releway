@@ -156,7 +156,22 @@ nav.navbar .navbar-brand img {
 }
 @media (max-width: 540px) {
   .carousel.header .overlay-header .info h1 {
-    font-size: 25px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .carousel.header .overlay-header .info h1 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 540px) {
+  .carousel.header .overlay-header .info p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .carousel.header .overlay-header .info p {
+    font-size: 12px;
   }
 }
 .about-us {
