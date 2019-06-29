@@ -254,6 +254,16 @@ nav.navbar .navbar-brand img {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media (max-width: 991px) {
+  .process {
+    background-attachment: scroll;
+  }
 }
 .process .overlay {
   position: absolute;
@@ -439,6 +449,11 @@ nav.navbar .navbar-brand img {
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media (max-width: 991px) {
+  .testimonials {
+    background-attachment: scroll;
+  }
 }
 .testimonials .owl-carousel.owl-loaded {
   width: 50%;

@@ -77,6 +77,10 @@
     background-position: center
     background-repeat: no-repeat
     background-attachment: fixed
+    background-size: cover
+    @include prefixer (background-size, cover, moz webkit o)
+    @media ($maxSmall)
+        background-attachment: scroll
     .overlay
         @include overlay
         background-color: rgba(225, 225, 225, 0.7)
@@ -197,6 +201,8 @@
     background-attachment: fixed
     background-size: cover
     @include prefixer (background-size, cover, moz webkit o)
+    @media ($maxSmall)
+        background-attachment: scroll
     .owl-carousel.owl-loaded
         width: 50%
         padding: 30px 20px
