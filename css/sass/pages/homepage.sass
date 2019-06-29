@@ -89,6 +89,8 @@
                 height: 350px
             @media ($extraSmall)
                 height: 400px
+            @media ($extraMobSmall)
+                height: 600px
             .carousel-caption
                 color: #000
                 h5
@@ -115,6 +117,9 @@
             background-color: $whiteColor
             margin: auto
             @include transition(all 0.4s ease-in-out)
+            @media ($extraMobSmall)
+                width: 30px
+                height: 30px
         a.carousel-control-prev
             left: -400px
             @media ($maxSmall)

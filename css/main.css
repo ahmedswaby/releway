@@ -285,6 +285,11 @@ nav.navbar .navbar-brand img {
     height: 400px;
   }
 }
+@media (max-width: 400px) {
+  .process .carousel-procces .carousel-item {
+    height: 600px;
+  }
+}
 .process .carousel-procces .carousel-item .carousel-caption {
   color: #000;
 }
@@ -320,6 +325,13 @@ nav.navbar .navbar-brand img {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+@media (max-width: 400px) {
+  .process .carousel-procces a.carousel-control-prev,
+.process .carousel-procces a.carousel-control-next {
+    width: 30px;
+    height: 30px;
+  }
 }
 .process .carousel-procces a.carousel-control-prev {
   left: -400px;
