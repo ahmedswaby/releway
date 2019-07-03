@@ -397,11 +397,23 @@ nav.navbar .navbar-brand img {
   margin-bottom: 0;
   list-style: none;
 }
+@media (max-width: 540px) {
+  .work .filter ul {
+    padding: 0;
+  }
+}
 .work .filter ul li {
   float: left;
   cursor: pointer;
   padding-bottom: 15px;
   padding-right: 20px;
+}
+@media (max-width: 540px) {
+  .work .filter ul li {
+    float: none;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
 }
 .work .filter ul li a {
   color: #676767;

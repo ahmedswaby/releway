@@ -155,11 +155,17 @@
             display: inline-block
             margin-bottom: 0
             list-style: none
+            @media ($extraSmall)
+                padding: 0
             li
                 float: left
                 cursor: pointer
                 padding-bottom: 15px
                 padding-right: $smallSpace
+                @media ($extraSmall)
+                    float: none
+                    padding-right: 0
+                    padding-bottom: $smallSpace
                 a
                     color: $whiteGray
                     text-transform: uppercase
