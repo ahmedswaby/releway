@@ -18,7 +18,7 @@ $(document).ready(function () {
         }
 
         // count up in projects section
-        if ($(window).scrollTop() >= 600) {
+        if ($(window).scrollTop() >= 700) {
 
             $({
                 countNum: $('.counter1').text()
@@ -196,26 +196,6 @@ $(document).ready(function () {
             }
         }
     });
-
-
-    // carousel controls animation for process section 
-    // $('.process').on('mouseenter', function () {
-    //     $('.carousel-procces a.carousel-control-prev').css({
-    //         'left': 0,
-    //     });
-    //     $('.carousel-procces a.carousel-control-next').css({
-    //         'right': 0
-    //     })
-    // })
-    // $('.process').on('mouseleave', function () {
-    //     $('.carousel-procces a.carousel-control-prev').css({
-    //         'left': '-400px'
-    //     });
-    //     $('.carousel-procces a.carousel-control-next').css({
-    //         'right': '-400px'
-    //     })
-    // })
-
 
     /* going to specific place by scrolling */
     $('.navbar li a').click(function (e) {

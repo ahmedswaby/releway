@@ -50,6 +50,7 @@ nav.navbar {
 @media (max-width: 992px) {
   nav.navbar {
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 nav.navbar .navbar-brand img {
@@ -87,9 +88,11 @@ nav.navbar .navbar-brand img {
   outline: none;
 }
 
+.carousel.header .carousel-item {
+  height: 100vh;
+}
 .carousel.header .carousel-item img {
   width: 100%;
-  height: 100vh;
   object-fit: cover;
 }
 .carousel.header a.carousel-control-prev {
